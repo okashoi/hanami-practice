@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  ruby-cli:
+    build: ./services/ruby
+    volumes:
+        - ./src:/usr/src/myapp
