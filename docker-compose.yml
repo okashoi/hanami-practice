@@ -1,7 +1,11 @@
 version: "3"
 
 services:
+  ruby-web:
+    build: ./ruby
+    ports:
+      - "${HTTP_PORT}:2300"
+    command: bundle exec hanami server
+
   ruby-cli:
-    build: ./services/ruby
-    volumes:
-        - ./src:/usr/src/myapp
+    build: ./ruby
